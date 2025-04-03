@@ -1,10 +1,12 @@
 * {
     box-sizing: border-box;
+    
 }
 
 body {
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
 }
 
 /* header */
@@ -16,24 +18,73 @@ body {
     padding-top: 16.18px;
     padding-bottom: 16.18px;
     text-align: center;
+    /* font-family: New Rail Alphabet; */
+    font-weight: 300;
+    font-size: 14.16px;
+    line-height: 16.18px;
+    letter-spacing: 0px;
+    text-transform: uppercase;
+
 }
 
 .bottom-header {
     height: 72.81273651123047;
-    top: 48.54px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 64.72px;
+    top: 18.54px;
     border-bottom-width: 1.01px;
-    padding-right: 64.72px;
-    padding-left: 64.72px; 
+    position: relative;
+}
+
+.header-title {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #322D2D;
+}
+
+.header-nav {
+    display: flex;
+    gap: 30px;
+}
+
+.header-nav a {
+    text-decoration: none;
+    position: relative;
+    /* font-family: New Rail Alphabet; */
+    font-weight: 300;
+    font-size: 16.18px;
+    line-height: 150%;
+    letter-spacing: 0%;
+    color: #322D2D;
+}
+
+.header-nav a img{
+    width: 12px;
+    height: 20px;
+    top: 1.8px;
+    /* left: 5.77px; */
+    position: absolute;
+    margin-left: 3px;
+}
+
+.header-search-bar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
 .search-btn {
     background-color: white;
     border: none;
+    cursor: pointer;
 }
 
 .search-btn img {
     width: 26.71px;
-    height: 26.71px;
+    /* height: 26.71px; */
     color: #322D2D;
     background-color: white;
 }
@@ -42,9 +93,140 @@ body {
     background: linear-gradient(93.63deg, #CAA648 -0.61%, #CAA648 10.09%, #D5B147 25.19%, #E4C267 46.69%, #E2C065 78.94%, #DBB95E 90.77%, #D0AE52 98.29%, #C09F41 104.74%, #BB9A3C 106.89%);
     padding: 12.14px 24.27px;
     border-radius: 505.64px;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 29.33px;
+    font-family: New Rail Alphabet;
+    font-weight: 300;
+    font-size: 18.2px;
+    line-height: 16.18px;
+    letter-spacing: 0px;
+    color: black;
+    cursor: pointer;
 }
 
 .btn-try img {
     width: 12px;
     height: 12px;
+}
+
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+    display: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.mobile-menu-toggle img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Mobile Sidebar */
+.mobile-sidebar {
+    position: fixed;
+    top: 0;
+    left: -280px;
+    width: 280px;
+    height: 100%;
+    background-color: white;
+    z-index: 1000;
+    transition: left 0.3s ease;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+    padding: 20px;
+}
+
+.mobile-sidebar.active {
+    left: 0;
+}
+
+.sidebar-close {
+    text-align: right;
+    font-size: 22px;
+    margin-bottom: 25px;
+    cursor: pointer;
+}
+
+.sidebar-close img {
+    width: 30px;
+    height: 30px;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sidebar-nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    position: relative;
+}
+
+.sidebar-nav a img {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    margin-right: 10px;
+}
+
+.sidebar-nav a.active {
+    color: #CAA648;
+    font-weight: bold;
+}
+
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 999;
+    display: none;
+}
+
+.sidebar-overlay.active {
+    display: block;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .header-nav {
+        display: none;
+    }
+    
+    .bottom-header {
+        padding: 0 30px;
+    }
+    
+    .mobile-menu-toggle {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    .bottom-header {
+        padding: 0 20px;
+    }
+    
+    .header-search-bar {
+        gap: 10px;
+    }
+    
+    .btn-try {
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .btn-try {
+        padding: 10px;
+    }
 }
