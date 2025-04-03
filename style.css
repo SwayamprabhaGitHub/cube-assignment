@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* header */
+.top-header {
+    background: #322D2D;
+    height: 49.36px;
+    color: white;
+    border-radius: 0px 0px 4.05px 4.05px;
+    padding-top: 16.18px;
+    padding-bottom: 16.18px;
+    text-align: center;
+}
+
+.bottom-header {
+    height: 72.81273651123047;
+    top: 48.54px;
+    border-bottom-width: 1.01px;
+    padding-right: 64.72px;
+    padding-left: 64.72px; 
+}
+
+.search-btn {
+    background-color: white;
+    border: none;
+}
+
+.search-btn img {
+    width: 26.71px;
+    height: 26.71px;
+    color: #322D2D;
+    background-color: white;
+}
+
+.btn-try {
+    background: linear-gradient(93.63deg, #CAA648 -0.61%, #CAA648 10.09%, #D5B147 25.19%, #E4C267 46.69%, #E2C065 78.94%, #DBB95E 90.77%, #D0AE52 98.29%, #C09F41 104.74%, #BB9A3C 106.89%);
+    padding: 12.14px 24.27px;
+    border-radius: 505.64px;
+}
+
+.btn-try img {
+    width: 12px;
+    height: 12px;
+}
