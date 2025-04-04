@@ -1,3 +1,4 @@
+
 @font-face {
     font-family: 'New Rail Alphabet';
     src: url('/font/NewRailAlphabet-Bold.otf') format('opentype');
@@ -45,6 +46,10 @@ body {
 
 }
 
+.first-part {
+    background: linear-gradient(180deg, rgba(243, 243, 243, 0.75) 0%, rgba(184, 184, 184, 0.8) 59.38%, rgba(243, 243, 243, 0.25) 100%);
+}
+
 .bottom-header {
     height: 72.81273651123047;
     display: flex;
@@ -52,6 +57,7 @@ body {
     justify-content: space-between;
     padding: 0 64.72px;
     top: 18.54px;
+    margin-bottom: 15px;
     border-bottom-width: 1.01px;
     position: relative;
 }
@@ -95,16 +101,14 @@ body {
 }
 
 .search-btn {
-    background-color: white;
     border: none;
     cursor: pointer;
+    background: inherit;
 }
 
 .search-btn img {
     width: 26.71px;
-    /* height: 26.71px; */
     color: #322D2D;
-    background-color: white;
 }
 
 .btn-try {
@@ -449,6 +453,34 @@ body {
     width: 150px;
 }
 
+/* Tagline Section Styles */
+.tagline-section {
+    width: 100%;
+    padding: 30px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tagline-container {
+    max-width: 912px;
+    width: 100%;
+    border: 2px solid #D5B147;
+    border-radius: 16px;
+    padding: 20px 40px;
+    background: linear-gradient(180deg, rgba(243, 243, 243, 0.75) 0%, rgba(184, 184, 184, 0.8) 59.38%, rgba(243, 243, 243, 0.25) 100%);
+}
+
+.tagline {
+    margin: 0;
+    font-family: 'New Rail Alphabet', sans-serif;
+    font-weight: 300;
+    font-size: 36px;
+    letter-spacing: -2.02px;
+    text-align: center;
+    color: #322D2D;
+}
+
 /* Responsive Styles */
 @media (max-width: 1200px) {
     .hero-section {
@@ -496,6 +528,14 @@ body {
 
     .stats-container {
         gap: 30px;
+    }
+
+    .tagline-container {
+        padding: 20px 30px;
+    }
+    
+    .tagline {
+        font-size: 32px;
     }
 }
 
@@ -562,6 +602,18 @@ body {
     .green {
         height: 60%;
     }
+
+    .tagline-section {
+        padding: 24px 16px;
+    }
+    
+    .tagline-container {
+        padding: 16px 24px;
+    }
+    
+    .tagline {
+        font-size: 28px;
+    }
 }
 
 @media (max-width: 576px) {
@@ -601,5 +653,13 @@ body {
 
     .product-display {
         height: 300px;
+    }
+
+    .tagline-container {
+        padding: 14px 18px;
+    }
+    
+    .tagline {
+        font-size: 24px;
     }
 }
