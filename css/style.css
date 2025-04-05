@@ -47,7 +47,7 @@ body {
 }
 
 .first-part {
-    background: linear-gradient(180deg, rgba(243, 243, 243, 0.75) 0%, rgba(184, 184, 184, 0.8) 19.38%, rgba(243, 243, 243, 0.25) 100%);
+    background: linear-gradient(180deg, rgba(243, 243, 243, 0.75) 0%, rgba(184, 184, 184, 0.8) 19.38%, rgba(243, 243, 243, 0.25) 70%, white 100%);
 }
 
 .bottom-header {
