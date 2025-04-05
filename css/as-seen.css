@@ -1,0 +1,88 @@
+.as-seen-section {
+    margin-block: 30px;
+    padding: 30px 0;
+}
+
+.as-seen-container {
+    width: 96%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 7px;
+}
+
+.as-seen-title {
+    color: #322D2D;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'New Rail Alphabet';
+    font-weight: 700;
+    font-size: 24.27px;
+    line-height: 140%;
+    letter-spacing: 0%;
+}
+
+.as-seen-logos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    margin: 0 auto;
+}
+
+.fast-company {
+    height: 24px;
+}
+
+.forbes {
+    height: 81px;
+}
+
+.goop {
+    height: 38px;
+}
+
+.time {
+    height: 38px;
+}
+
+.new-york {
+    height: 38px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .as-seen-logos {
+        gap: 40px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 992px) {
+    .as-seen-logos {
+        gap: 30px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .as-seen-section {
+        padding: 30px 0;
+    }
+
+    .as-seen-logos {
+        gap: 25px 40px;
+    }
+
+}
+
+@media (max-width: 576px) {
+    .as-seen-section {
+        padding: 30px 0;
+    }
+
+    .as-seen-logos {
+        gap: 30px;
+    }
+}
