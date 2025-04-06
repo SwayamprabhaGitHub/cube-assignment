@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/gaurantee.css" />
     <link rel="stylesheet" href="/css/as-seen.css" />
+    <link rel="stylesheet" href="/css/product-section.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
@@ -230,6 +232,318 @@
           </div>
         </div>
       </section>
+    <!-- Alcami Elements Product Section -->
+    <section class="product-section">
+        <div class="p-container product-container">
+          <!-- Product Gallery -->
+          <div class="product-gallery">
+            <div class="product-main-img">
+              <img
+                src="/assets/AlcamiElements/one.png"
+                alt="Alcami Elements Original"
+              />
+            </div>
+            <div class="gallery-thumbnails">
+              <span class="thumbnail active"></span>
+              <span class="thumbnail"></span>
+              <span class="thumbnail"></span>
+              <span class="thumbnail"></span>
+              <span class="thumbnail"></span>
+              <span class="thumbnail"></span>
+              <span class="thumbnail"></span>
+              <span class="thumbnail"></span>
+            </div>
+            <div class="gallery-nav">
+              <button class="nav-button prev-btn">
+                <i class="fas fa-chevron-left"></i>
+              </button>
+              <button class="nav-button next-btn">
+                <i class="fas fa-chevron-right"></i>
+              </button>
+            </div>
+            <div class="thumbnail-grid">
+              <div class="thumbnail-item">
+                <img
+                  src="/assets/AlcamiElements/one.png"
+                  alt="Alcami Elements Thumbnail"
+                />
+              </div>
+              <div class="thumbnail-item">
+                <img
+                  src="/assets/AlcamiElements/img1.png"
+                  alt="Alcami Elements Thumbnail"
+                />
+              </div>
+              <div class="thumbnail-item">
+                <img
+                  src="/assets/AlcamiElements/img2.png"
+                  alt="Alcami Elements Thumbnail"
+                />
+              </div>
+              <div class="thumbnail-item">
+                <img
+                  src="/assets/AlcamiElements/img4.jpeg"
+                  alt="Alcami Elements Thumbnail"
+                />
+              </div>
+              <div class="thumbnail-item">
+                <img
+                  src="/assets/AlcamiElements/green.png"
+                  alt="Alcami Elements Thumbnail"
+                />
+              </div>
+              <div class="thumbnail-item">
+                <img
+                  src="/assets/AlcamiElements/img3.png"
+                  alt="Alcami Elements Thumbnail"
+                />
+              </div>
+              <div class="thumbnail-item">
+                <img
+                  src="/assets/AlcamiElements/brown.png"
+                  alt="Alcami Elements Thumbnail"
+                />
+              </div>
+              <div class="thumbnail-item">
+                <img
+                  src="/assets/AlcamiElements/img5.png"
+                  alt="Alcami Elements Thumbnail"
+                />
+              </div>
+            </div>
+          </div>
+  
+          <!-- Product Information -->
+          <div class="product-info">
+            <h2 class="product-title">Alcami Elements</h2>
+            <div class="product-rating">
+              <div class="stars">
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+              </div>
+              <span class="rating-count">4.7 (999+ reviews)</span>
+            </div>
+  
+            <p class="product-description">
+              Discover the ancient wisdom supported by modern science, all within
+              the synergy of Alcami Elements. Designed for those who aspire to
+              elevate every facet of life with awareness and intention.
+            </p>
+  
+            <!-- Flavor Selection -->
+            <div class="flavor-section">
+              <h3 class="flavor-title">Choose a flavor</h3>
+              <div class="flavor-options">
+                <label class="flavor-option">
+                  <div class="flavor-header">
+                    <div class="radio-container">
+                      <input
+                        type="radio"
+                        name="flavor"
+                        value="original"
+                        checked
+                      />
+                      <span class="radio-custom"></span>
+                    </div>
+                    <span class="flavor-name">Original</span>
+                  </div>
+                  <div class="flavor-img">
+                    <img
+                      src="/assets/AlcamiElements/white.png"
+                      alt="Original Flavor"
+                    />
+                  </div>
+                  <span class="best-seller-badge">BEST-SELLER</span>
+                </label>
+  
+                <label class="flavor-option">
+                  <div class="flavor-header">
+                    <div class="radio-container">
+                      <input type="radio" name="flavor" value="matcha" />
+                      <span class="radio-custom"></span>
+                    </div>
+                    <span class="flavor-name">Matcha</span>
+                  </div>
+                  <div class="flavor-img">
+                    <img
+                      src="/assets/AlcamiElements/green.png"
+                      alt="Matcha Flavor"
+                    />
+                  </div>
+                </label>
+  
+                <label class="flavor-option">
+                  <div class="flavor-header">
+                    <div class="radio-container">
+                      <input type="radio" name="flavor" value="cacao" />
+                      <span class="radio-custom"></span>
+                    </div>
+                    <span class="flavor-name">Cacao</span>
+                  </div>
+                  <div class="flavor-img">
+                    <img
+                      src="/assets/AlcamiElements/brown.png"
+                      alt="Cacao Flavor"
+                    />
+                  </div>
+                </label>
+              </div>
+            </div>
+            <!-- subscription-options -->
+            <div class="product-options">
+                <div class="purchase-options">
+                    <div class="subscription-options">
+                        <div class="subscription-option" id="option-single">
+
+                            <div class="popular-tag">Most Popular</div>
+                            <div class="subscription-option-name">
+                                <div class="inflexC">
+                                    <input type="radio" name="purchase" value="single" id="single" checked>
+                                    <div class="subscription-title">Single Kit Subscription</div>
+                                </div>
+                                <div class="subscription-price">$37 USD <del>$46</del></div>
+
+                            </div>
+                            <div class="subscription-details" id="single-details">
+
+                                <b>What's included</b>
+
+                                <div class="subscription-display">
+                                    <div class="display-product">
+                                        Every 30 Days
+                                        <img src="assets/AlcamiElements/white.png" alt="Shipping">
+                                    </div>
+
+                                    <div class="display-combo">
+                                        <p>One Time <span>(Free)</span></p>
+                                        <img src="assets/AlcamiElements/combo.png" alt="Shipping">
+                                    </div>
+                                </div>
+                                <ul class="check-list">
+                                    <li>30 Servings Shipped Monthly</li>
+                                    <li><strong>Free</strong> Golden Kit God Bottle Spoon (42$ Value)</li>
+                                    <li><strong>Free</strong> 60 Days Supply Of Alcami Shilajt ($78 Value)</li>
+                                    <li><strong>50% OFF</strong> Shipping (Over $7 - $10 in Savings)</li>
+                                    <li>Pause Or Cancel Anytime After 3 Months Minimum</li>
+                                    <li>90 Days Money Back Guarantee</li>
+                                </ul>
+
+                            </div>
+                        </div>
+
+                        <div class="subscription-option" id="option-monthly">
+                            <div class="subscription-option-name">
+                                <div class="inflexC">
+                                    <input type="radio" name="purchase" value="double" id="double">
+                                    <div class="subscription-title">Double Kit Subscription</div>
+                                </div>
+                                <div class="subscription-price">$68 USD <del>$83</del></div>
+
+                            </div>
+
+                            <div class="subscription-details" id="double-details">
+
+                                <b>What's included</b>
+
+                                <div class="subscription-display">
+                                    <div class="display-product">
+                                        Every 30 Days
+                                        <img src="assets/AlcamiElements/white.png" alt="Shipping">
+                                    </div>
+
+                                    <div class="display-combo">
+                                        <p>One Time <span>(Free)</span></p>
+                                        <img src="assets/AlcamiElements/combo.png" alt="Shipping">
+                                    </div>
+                                </div>
+                                <ul class="check-list">
+                                    <li>30 Servings Shipped Monthly</li>
+                                    <li><strong>Free</strong> Golden Kit God Bottle Spoon (42$ Value)</li>
+                                    <li><strong>Free</strong> 60 Days Supply Of Alcami Shilajt ($78 Value)</li>
+                                    <li><strong>50% OFF</strong> Shipping (Over $7 - $10 in Savings)</li>
+                                    <li>Pause Or Cancel Anytime After 3 Months Minimum</li>
+                                    <li>90 Days Money Back Guarantee</li>
+                                </ul>
+
+                            </div>
+                        </div>
+
+                        <div class="subscription-option" id="option-quarterly">
+
+                            <div class="subscription-option-name">
+                                <div class="inflexC">
+                                    <input type="radio" name="purchase" value="once" id="once">
+                                    <div class="subscription-title">Try Once</div>
+                                </div>
+                                <div class="subscription-price">$46 USD</div>
+
+                            </div>
+
+                            <div class="subscription-details" id="double-details">
+
+                                <b>What's included</b>
+
+                                <div class="subscription-display">
+                                    <div class="display-product">
+                                        Every 30 Days
+                                        <img src="assets/AlcamiElements/white.png" alt="Shipping">
+                                    </div>
+
+                                    <div class="display-combo">
+                                        <p>One Time <span>(Free)</span></p>
+                                        <img src="assets/AlcamiElements/combo.png" alt="Shipping">
+                                    </div>
+                                </div>
+                                <ul class="check-list">
+                                    <li>30 Servings Shipped Monthly</li>
+                                    <li><strong>Free</strong> Golden Kit God Bottle Spoon (42$ Value)</li>
+                                    <li><strong>Free</strong> 60 Days Supply Of Alcami Shilajt ($78 Value)</li>
+                                    <li><strong>50% OFF</strong> Shipping (Over $7 - $10 in Savings)</li>
+                                    <li>Pause Or Cancel Anytime After 3 Months Minimum</li>
+                                    <li>90 Days Money Back Guarantee</li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                    <button class="add-to-cart" type="button" id="add-to-cart-button">
+                        Add to Cart <i class="fas fa-arrow-right"></i>
+                      </button>
+                </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    <!-- certify section -->
+    <div class="certify-section">
+        <div class="certify-items">
+            <img loading="lazy" src="assets/certification/certification-1.svg" alt="">
+            <p>Non-GMO</p>
+        </div>
+        <div class="certify-items">
+            <img loading="lazy" src="assets/certification/certification-2.svg" alt="">
+            <p>Dairy Free</p>
+        </div>
+        <div class="certify-items">
+            <img loading="lazy" src="assets/certification/certification-3.svg" alt="">
+            <p>Vegan</p>
+        </div>
+        <div class="certify-items">
+            <img loading="lazy" src="assets/certification/certification-4.svg" alt="">
+            <p>Keto</p>
+        </div>
+        <div class="certify-items">
+            <img loading="lazy" src="assets/certification/certification-5.svg" alt="">
+            <p>GMP Certified</p>
+        </div>
+        <div class="certify-items">
+            <img loading="lazy" src="assets/certification/certification-6.svg" alt="">
+            <p>NSF Certified</p>
+        </div>
+    </div>
     <footer></footer>
     <script src="script.js"></script>
 </body>

@@ -26,3 +26,175 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.style.overflow = '';
     });
 });
+
+
+// Product Gallery functionality
+initProductGallery();
+function initProductGallery() {
+    const mainImg = document.querySelector(".product-main-img img")
+    const thumbnails = document.querySelectorAll(".thumbnail")
+    const thumbnailItems = document.querySelectorAll(".thumbnail-item")
+    const prevBtn = document.querySelector(".prev-btn")
+    const nextBtn = document.querySelector(".next-btn")
+  
+    if (!mainImg || !thumbnails.length) return
+  
+    let currentIndex = 0
+    const maxIndex = thumbnailItems.length - 1
+  
+    // Store all thumbnail image sources for easy access
+    const thumbnailSources = []
+    thumbnailItems.forEach((item) => {
+      const img = item.querySelector("img")
+      if (img && img.src) {
+        thumbnailSources.push(img.src)
+      } else {
+        thumbnailSources.push("placeholder.jpg") // Fallback
+      }
+    })
+  
+    // Set initial image and thumbnail
+    if (thumbnailSources.length > 0) {
+      mainImg.src = thumbnailSources[0]
+    }
+    setActiveThumbnail(currentIndex)
+  
+    // Event listeners for thumbnails (dots)
+    thumbnails.forEach((thumbnail, index) => {
+      thumbnail.addEventListener("click", () => {
+        // Direct one-to-one mapping - each dot corresponds to one image
+        currentIndex = index
+        updateGallery()
+      })
+    })
+  
+    // Event listeners for thumbnail items (actual thumbnail images)
+    if (thumbnailItems.length) {
+      thumbnailItems.forEach((item, index) => {
+        item.addEventListener("click", () => {
+          currentIndex = index
+          updateGallery()
+        })
+      })
+    }
+  
+    // Previous button
+    if (prevBtn) {
+      prevBtn.addEventListener("click", () => {
+        currentIndex = currentIndex > 0 ? currentIndex - 1 : maxIndex
+        updateGallery()
+      })
+    }
+  
+    // Next button
+    if (nextBtn) {
+      nextBtn.addEventListener("click", () => {
+        currentIndex = currentIndex < maxIndex ? currentIndex + 1 : 0
+        updateGallery()
+      })
+    }
+  
+    // Update gallery based on current index
+    function updateGallery() {
+      // Always set the main image from our stored sources
+      if (thumbnailSources[currentIndex]) {
+        mainImg.src = thumbnailSources[currentIndex]
+      }
+  
+      setActiveThumbnail(currentIndex)
+    }
+  
+    // Set active thumbnail
+    function setActiveThumbnail(index) {
+      // Update the dots (thumbnails)
+      thumbnails.forEach((thumb, i) => {
+        // Direct one-to-one mapping between thumbnails and dots
+        if (i === index) {
+          thumb.classList.add("active")
+        } else {
+          thumb.classList.remove("active")
+        }
+      })
+  
+      // Update the thumbnail images
+      if (thumbnailItems.length) {
+        thumbnailItems.forEach((item, i) => {
+          if (i === index) {
+            item.classList.add("active")
+          } else {
+            item.classList.remove("active")
+          }
+        })
+      }
+    }
+  }
+  
+
+// cart functionality
+document.addEventListener('DOMContentLoaded', function () {
+    const cartUrls = {
+      'original': {
+        'single': 'https://example.com/cart?product=original-alcami-single',
+        'double': 'https://example.com/cart?product=original-alcami-double',
+        'once': 'https://example.com/cart?product=original-alcami-once'
+      },
+      'matcha': {
+        'single': 'https://example.com/cart?product=matcha-alcami-single',
+        'double': 'https://example.com/cart?product=matcha-alcami-double',
+        'once': 'https://example.com/cart?product=matcha-alcami-once'
+      },
+      'cocoa': {
+        'single': 'https://example.com/cart?product=cocoa-alcami-single',
+        'double': 'https://example.com/cart?product=cocoa-alcami-double',
+        'once': 'https://example.com/cart?product=cocoa-alcami-once'
+      }
+    };
+  
+    const subscriptionOptions = document.querySelectorAll('.subscription-option');
+  
+    function updateCartButton() {
+      const selectedFlavor = document.querySelector('input[name="flavor"]:checked').value;
+      const selectedPurchase = document.querySelector('input[name="purchase"]:checked').value;
+  
+      const cartButton = document.getElementById('add-to-cart-button');
+    //   cartButton.href = cartUrls[selectedFlavor][selectedPurchase];
+      cartButton.addEventListener('click', function() {
+        // Navigate to a new URL
+        window.location.href = cartUrls[selectedFlavor][selectedPurchase];
+      });
+    }
+  
+    subscriptionOptions.forEach(option => {
+      option.addEventListener('click', function () {
+        const radioInput = this.querySelector('input[type="radio"]');
+        radioInput.checked = true;
+  
+        subscriptionOptions.forEach(opt => {
+          opt.classList.remove('selected');
+          const details = opt.querySelector('.subscription-details');
+          details.classList.remove('visible');
+        });
+  
+        this.classList.add('selected');
+  
+        const details = this.querySelector('.subscription-details');
+        details.classList.add('visible');
+  
+        updateCartButton();
+      });
+    });
+  
+    const flavorRadios = document.querySelectorAll('input[name="flavor"]');
+    flavorRadios.forEach(radio => {
+      radio.addEventListener('change', updateCartButton);
+    });
+  
+    const purchaseRadios = document.querySelectorAll('input[name="purchase"]');
+    purchaseRadios.forEach(radio => {
+      radio.addEventListener('change', updateCartButton);
+    });
+  
+    document.getElementById('option-single').classList.add('selected');
+    document.getElementById('single-details').classList.add('visible');
+    updateCartButton();
+  });
