@@ -1,0 +1,128 @@
+
+  /* FAQ Layout */
+  .faq-container {
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    color: #333;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+  
+  /* Header Styles */
+  .faq-header {
+    flex: 1;
+    max-width: 400px;
+  }
+  
+  .faq-header h1 {
+    text-align: left;
+    font-size: 42px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .faq-header p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #555;
+  }
+  
+  .get-in-touch-btn {
+    display: inline-block;
+    background: linear-gradient(93.63deg, #CAA648 -0.61%, #CAA648 10.09%, #D5B147 25.19%, #E4C267 46.69%, #E2C065 78.94%, #DBB95E 90.77%, #D0AE52 98.29%, #C09F41 104.74%, #BB9A3C 106.89%);
+    color: black;
+    text-decoration: none;
+    padding: 10px 32px;
+    border-radius: 30px;
+    transition: background-color 0.3s;
+  }
+  
+  .get-in-touch-btn:hover {
+    background-color: #c9a74b;
+  }
+  
+  .f-arrow {
+    margin-left: 8px;
+  }
+  
+  /* FAQ Content Styles */
+  .faq-content {
+    flex: 2;
+  }
+  
+  .faq-item {
+    border-bottom: 1px solid #ddd;
+    padding: 18px 0;
+  }
+  
+  .faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .faq-question h3 {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  
+  .plus-icon {
+    font-size: 24px;
+    transition: transform 0.3s;
+  }
+  
+  .faq-item.active .plus-icon {
+    transform: rotate(45deg);
+  }
+  
+  .faq-answer {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
+    padding-right: 40px;
+  }
+  
+  .faq-item.active .faq-answer {
+    height: auto;
+    margin-top: 16px;
+  }
+  
+  .faq-see-all {
+    margin-top: 24px;
+    text-align: right;
+  }
+  
+  .see-all-btn {
+    display: inline-block;
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+  }
+  
+  .see-all-btn:hover {
+    color: #d6b460;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .faq-container {
+      flex-direction: column;
+      gap: 40px;
+    }
+  
+    .faq-header {
+      max-width: 100%;
+    }
+  
+    .faq-header h1 {
+      font-size: 32px;
+    }
+  
+    .faq-question h3 {
+      font-size: 16px;
+    }
+  }
