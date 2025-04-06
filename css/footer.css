@@ -119,4 +119,59 @@ footer {
     gap: 30px;
 }
 
+/* Add these responsive styles to your existing footer CSS */
 
+/* Tablet styles */
+@media (max-width: 992px) {
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+    
+    .footer-newsletter {
+        grid-column: span 2;
+        grid-row: 2;
+    }
+    
+    .footer-logo img {
+        max-width: 300px;
+    }
+}
+
+/* Mobile styles */
+@media (max-width: 576px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .footer-newsletter {
+        grid-column: 1;
+    }
+    
+    .footer-logo img {
+        max-width: 200px;
+    }
+    
+    .newsletter-form {
+        flex-direction: column;
+    }
+    
+    .newsletter-input {
+        width: 100%;
+    }
+    
+    .newsletter-button {
+        margin-top: 10px;
+        margin-inline-start: 0;
+        width: 100%;
+    }
+    
+    .footer-nav {
+        grid-template-columns: 1fr;
+    }
+    
+    footer {
+        padding: 40px 20px;
+    }
+}
