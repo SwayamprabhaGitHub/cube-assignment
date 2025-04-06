@@ -1,0 +1,156 @@
+.subscription-banner {
+    margin: 30px 80px;
+    background: url('/assets/subscribe-sec-img.jpeg');
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-color: #f8f7f1;
+    border-radius: 16px;
+}
+
+.subscription-content {
+    width: 55%;
+    padding: 60px 80px;
+}
+
+.small-head {
+    color: #CAA648;
+    font-size: 12.43px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    font-family: Oxanium;
+    line-height: 100%;
+    letter-spacing: 3.14px;
+}
+
+.subscription-content h2 {
+    font-family: 'New Rail Alphabet', sans-serif;
+    font-size: 42px;
+    line-height: 100%;
+    color: #322D2D;
+    margin-bottom: 30px;
+    font-weight: 300;
+    letter-spacing: 0px;
+}
+
+.subscription-content h2 strong {
+    font-weight: 700;
+}
+
+.labels {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.label {
+    background-color: #D6D5D5;
+    padding: 12px 20px;
+    border-radius: 50px;
+    font-size: 16.5px;
+    font-weight: 300;
+    color: #322D2D;
+    font-family: 'New Rail Alphabet', sans-serif;
+}
+
+.subscribe-btn {
+    background: linear-gradient(93.63deg, #CAA648 -0.61%, #CAA648 10.09%, #D5B147 25.19%, #E4C267 46.69%, #E2C065 78.94%, #DBB95E 90.77%, #D0AE52 98.29%, #C09F41 104.74%, #BB9A3C 106.89%);
+    color: #000;
+    border: none;
+    border-radius: 50px;
+    padding: 12.5px 25px;
+    font-size: 21px;
+    font-weight: 300;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 65px;
+    line-height: 16.76px;
+    letter-spacing: 0px;
+}
+
+.arrow {
+    font-size: 24px;
+    line-height: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .subscription-content {
+        padding: 60px;
+    }
+    
+    .subscription-content h2 {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 992px) {
+    
+    .subscription-banner {
+        margin: 20px 40px;
+    }
+    
+    .subscription-content {
+        padding: 40px;
+        width: 60%;
+    }
+    
+    .subscription-content h2 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    
+    .subscription-banner {
+        margin: 20px;
+        background-position: center;
+    }
+    
+    .subscription-content {
+        width: 100%;
+        padding: 40px 30px;
+    }
+    
+    .labels {
+        gap: 8px;
+    }
+    
+    .label {
+        padding: 10px 15px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 576px) {
+    
+    .subscription-banner {
+        margin: 15px;
+    }
+    
+    .subscription-content {
+        padding: 30px 20px;
+    }
+    
+    .subscription-content h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    
+    .labels {
+        margin-bottom: 25px;
+    }
+    
+    .label {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+    
+    .subscribe-btn {
+        padding: 12px 30px;
+        font-size: 16px;
+    }
+}
