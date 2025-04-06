@@ -1,0 +1,258 @@
+.table-container {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+    font-family: 'New Rail Alphabet', sans-serif;
+}
+
+.table-heading {
+    text-align: center;
+    color: #322D2D;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: New Rail Alphabet;
+    font-weight: 300;
+    font-size: 40.45px;
+    line-height: 100%;
+    letter-spacing: 0px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    margin-bottom: 40px;
+}
+
+.feature-col {
+    width: 25%;
+    vertical-align: middle;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 23px;
+    text-align: left;
+}
+
+.option-col {
+    width: 18.75%;
+}
+
+th, td {
+    padding: 15px;
+    border-bottom: 1px solid #E5E5E5;
+    font-weight: 300;
+    font-size: 16px;
+    color: #322D2D;
+    position: relative;
+    text-align: center;
+}
+tr th:nth-child(2) {
+    background-color: #f0eee6;
+    border-radius: 10px 10px 0 0;
+}
+
+tr td:nth-child(2) {
+    background-color: #f0eee6;
+}
+
+tr td:first-child {
+    text-align: left;
+}
+
+tr:last-child td {
+    border-radius: 0 0 10px 10px;
+}
+
+thead th {
+    padding-bottom: 25px;
+    vertical-align: top;
+}
+
+.image-containerT {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.image-placeholderT {
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.image-placeholderT img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.image-titleT {
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.image-titleT img {
+    max-width: 100px;
+    max-height: 25px;
+}
+
+.selected-column {
+    font-weight: 700;
+    text-align: center;
+}
+
+.center-icon {
+    text-align: center;
+}
+
+.center-icon img {
+    width: 24px;
+    height: 24px;
+}
+
+tbody tr:first-child {
+    border-top: 1px solid #E5E5E5;
+}
+
+tbody td:first-child {
+    text-transform: capitalize;
+    font-weight: 500;
+}
+
+.table-button {
+    background: linear-gradient(93.63deg, #CAA648 -0.61%, #CAA648 10.09%, #D5B147 25.19%, #E4C267 46.69%, #E2C065 78.94%, #DBB95E 90.77%, #D0AE52 98.29%, #C09F41 104.74%, #BB9A3C 106.89%);
+    padding: 16px 32px;
+    border-radius: 100px;
+    border: none;
+    font-family: 'New Rail Alphabet', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    color: black;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: fit-content;
+}
+
+.table-button span {
+    font-size: 18px;
+    padding-left: 5px;
+}
+
+.table-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Styles for Tablet */
+@media (max-width: 992px) {
+    .table-heading {
+        font-size: 28px;
+    }
+    
+    .feature-col {
+        width: 30%;
+    }
+    
+    .option-col {
+        width: 17.5%;
+    }
+    
+    th, td {
+        padding: 12px 8px;
+        font-size: 14px;
+    }
+    
+    .image-placeholderT {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .image-titleT {
+        font-size: 11px;
+    }
+}
+
+/* Responsive Styles for Mobile */
+@media (max-width: 768px) {
+    .table-container {
+        margin: 40px auto;
+        padding: 0 15px;
+        overflow-x: auto;
+    }
+    
+    .table-heading {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+    
+    table {
+        min-width: 650px; /* Ensures table scrolls horizontally on small screens */
+    }
+    
+    .feature-col {
+        width: 25%;
+    }
+    
+    .option-col {
+        width: 18.75%;
+    }
+    
+    th, td {
+        padding: 10px 6px;
+        font-size: 13px;
+    }
+    
+    .image-placeholderT {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .image-titleT {
+        font-size: 10px;
+    }
+    
+    .center-icon img {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .table-button {
+        padding: 14px 28px;
+        font-size: 16px;
+    }
+}
+
+/* For very small screens */
+@media (max-width: 576px) {
+    .table-container {
+        margin: 30px auto;
+        padding: 0 10px;
+    }
+    
+    .table-heading {
+        font-size: 22px;
+        margin-bottom: 25px;
+    }
+    
+    .table-button {
+        padding: 12px 24px;
+        font-size: 15px;
+        width: 80%;
+    }
+}

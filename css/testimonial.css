@@ -1,0 +1,130 @@
+.testimonial-container {
+    width: 100%;
+    background-color: #f0efeb;
+    padding: 30px;
+    overflow: hidden;
+    margin-top: 10px;
+    position: relative;
+}
+
+.testimonial-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.testimonial-header h2 {
+    font-size: 34px;
+    color: #333;
+    font-weight: 300;
+}
+
+.navigation-arrows {
+    display: flex;
+    gap: 15px;
+}
+
+.t-arrow {
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.t-arrow img {
+    height: 35px;
+}
+
+.t-arrow.next {
+    background: #000;
+}
+
+.t-arrow.next img {
+    filter: invert(100%);
+}
+
+.intro-text {
+    margin-bottom: 30px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.testimonial-cards {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    box-sizing: border-box;
+}
+
+.stars-img {
+    height: 24px;
+    margin-bottom: 15px;
+}
+
+.testimonial-text {
+    color: #444;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    min-height: 100px;
+}
+
+.author-info {
+    display: flex;
+    align-items: center;
+}
+
+.author-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.author-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.author-name {
+    font-weight: 600;
+    color: #333;
+}
+
+.author-profession {
+    font-size: 14px;
+    color: #777;
+}
+
+.indicatorsT {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 10px;
+}
+
+.indicatorT {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid black;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.indicatorT.active {
+    background-color: black;
+}
